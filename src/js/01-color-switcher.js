@@ -1,16 +1,16 @@
 const startEl = document.querySelector('button[data-start]');
 const stoptEl = document.querySelector('button[data-stop]');
 const bodyEl = document.querySelector('body');
+let timerId = null;
 
 startEl.addEventListener('click', handleStart);
 stoptEl.addEventListener('click', handleStop);
 
 function handleStart() {
   toggleAttributeDisabled();
-  const timerId = setInterval(() => {
+  timerId = setInterval(() => {
     bodyEl.style.backgroundColor = getRandomHexColor();
   }, 1000);
-  return timerId;
 }
 
 function handleStop() {
