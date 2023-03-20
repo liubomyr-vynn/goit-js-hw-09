@@ -7,7 +7,7 @@ stoptEl.addEventListener('click', handleStop);
 
 function handleStart() {
   toggleAttributeDisabled();
-  timerId = setInterval(() => {
+  const timerId = setInterval(() => {
     bodyEl.style.backgroundColor = getRandomHexColor();
   }, 1000);
 }
