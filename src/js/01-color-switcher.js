@@ -10,6 +10,7 @@ function handleStart() {
   const timerId = setInterval(() => {
     bodyEl.style.backgroundColor = getRandomHexColor();
   }, 1000);
+  return timerId;
 }
 
 function handleStop() {
